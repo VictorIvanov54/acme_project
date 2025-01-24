@@ -3,6 +3,7 @@
 {% load django_bootstrap5 %}
 {% block content %}
   <!-- Обращаемся через object -->
+  {% if birthday.author == user %}
   <h1>Удалить запись {{ object.pk }}</h1>
   <div class="card col-4 m-3">
     <div class="card-header">
@@ -17,4 +18,5 @@
       </form>
     </div>
   </div>
+  {% endif %}
 {% endblock content %}
